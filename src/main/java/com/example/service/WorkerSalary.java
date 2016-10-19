@@ -28,7 +28,7 @@ public class WorkerSalary implements IWServ {
     public void print(Integer id) {
 
        IWorker iWorker = (Manager) managerDao.findOne(id);
-//        iWorker = (Manager) managerDao.findOne(id);
+       iWorker = (Developer) managerDao.findOne(id);
 
 
         System.out.println(iWorker.getPosition());
