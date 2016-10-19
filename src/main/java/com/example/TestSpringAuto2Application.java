@@ -10,6 +10,7 @@ public class TestSpringAuto2Application {
 
 	public static void main(String[] args) {
 		BeanFactory beanFactory = SpringApplication.run(TestSpringAuto2Application.class, args);
-		beanFactory.getBean(WorkerSalary.class).print(1);
+		beanFactory.getBean(WorkerSalary.class).print(4);
+//		beanFactory.getBean(WorkerSalary.class).print(11);
 	}
 }

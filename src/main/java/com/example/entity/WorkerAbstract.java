@@ -1,12 +1,10 @@
 package com.example.entity;
 
 import com.example.IWorker;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 @Component
-@Getter @Setter
+
 
 public abstract class WorkerAbstract implements IWorker {
 
@@ -19,10 +17,28 @@ public abstract class WorkerAbstract implements IWorker {
         this.id = id;
     }
 
-    @Override
-    public Integer getId() {
-        return null;
+    public String getName() {
+        return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "WorkerAbstract{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }

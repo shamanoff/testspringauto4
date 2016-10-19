@@ -18,6 +18,7 @@ public class WorkerSalary implements IWServ {
     @Autowired
     private IEntityDao managerDao;
 
+    @Autowired
     public WorkerSalary(IEntityDao devDao, IEntityDao managerDao) {
         this.devDao = devDao;
         this.managerDao = managerDao;
@@ -26,16 +27,16 @@ public class WorkerSalary implements IWServ {
     @Override
     public void print(Integer id) {
 
-        Developer developer = (Developer) devDao.findOne(id);
-        Manager manager = (Manager) managerDao.findOne(id);
+       IWorker iWorker = (Manager) managerDao.findOne(id);
+//        iWorker = (Manager) managerDao.findOne(id);
 
 
-        System.out.println(developer);
-        System.out.println(manager);
+        System.out.println(iWorker.getPosition());
+        System.out.println(iWorker.getId());
+        System.out.println(iWorker.getName());
 
 
     }
-
 
 
     @Override
@@ -43,10 +44,10 @@ public class WorkerSalary implements IWServ {
 
         for (IWorker iWorker : listWorkers) {
 
-            if(iWorker instanceof Developer){
+            if (iWorker instanceof Developer) {
                 devDao.save(iWorker);
             }
-            if(iWorker instanceof Manager){
+            if (iWorker instanceof Manager) {
                 managerDao.save(iWorker);
             }
         }

@@ -4,5 +4,5 @@ public interface IEntityDao<T extends IWorker> {
 
     void save(T entity);
 
-    T findOne(Integer id);
+     T findOne(Integer id);
 }

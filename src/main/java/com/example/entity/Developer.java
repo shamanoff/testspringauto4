@@ -1,12 +1,10 @@
 package com.example.entity;
 
-import lombok.Getter;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-@Getter
 public class Developer extends WorkerAbstract  {
 
 
@@ -15,6 +13,14 @@ public class Developer extends WorkerAbstract  {
 
     public Developer(String name, Integer id, String position) {
         super(name, id);
+        this.position = position;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
         this.position = position;
     }
 }
