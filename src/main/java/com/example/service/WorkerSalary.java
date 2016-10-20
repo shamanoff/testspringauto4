@@ -24,24 +24,20 @@ public class WorkerSalary implements IWServ {
         this.managerDao = managerDao;
     }
 
-    private void sout(IWorker iWorker){
-        System.out.println(iWorker.getPosition());
-        System.out.println(iWorker.getId());
-        System.out.println(iWorker.getName());
 
-    }
     @Override
     public void print(Integer id) {
 
         Manager manager= (Manager) managerDao.findOne(id);
         if (manager != null ) {
-            sout(manager);
+            System.out.println(manager.toString() + manager.getPosition());
+
         }
         Developer developer = (Developer) devDao.findOne(id);
 
         if (developer != null ) {
-            sout(developer);
 
+            System.out.println(developer.toString() + developer.getPosition());
         }
         if( developer == null && manager == null) {
           System.out.println("id's isn't find ");
