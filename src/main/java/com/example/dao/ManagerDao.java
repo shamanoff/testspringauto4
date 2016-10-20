@@ -40,4 +40,6 @@ public class ManagerDao implements IEntityDao<Manager> {
         return map.get(id);
     }
 
+
+
 }

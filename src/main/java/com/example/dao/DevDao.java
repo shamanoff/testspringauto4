@@ -41,6 +41,9 @@ public class DevDao implements IEntityDao<Developer> {
     }
 
 
+    public void print(Integer id) {
+
+    }
 
 
 }

@@ -7,4 +7,5 @@ public interface IWorker {
     String getPosition();
 
     String getName();
+
 }
