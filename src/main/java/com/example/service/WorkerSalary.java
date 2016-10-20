@@ -40,7 +40,7 @@ public class WorkerSalary implements IWServ {
             System.out.println(developer.toString() + developer.getPosition());
         }
         if( developer == null && manager == null) {
-          System.out.println("id's isn't find ");
+          System.out.println("ID not found");
 
         }
     }
